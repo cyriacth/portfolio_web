@@ -17,7 +17,7 @@ def profile():
 @views.route("/json")
 def get_json():
     #Ici, on jsonify un dico python
-    return jsonify({'name' : 'cyriac', 'coolness' : 40})
+    return jsonify({'name' : 'cyriac', 'coolness' : 40, 'r' : 0})
 
 @views.route("/data")
 def get_data():
@@ -27,3 +27,7 @@ def get_data():
 @views.route("/go-to-home")
 def go_to_home():
     return redirect(url_for("views.home"))
+
+@views.route("/profile/<name>")
+def profile_name(name):
+    return render_template('profile_name.html', name = name)
