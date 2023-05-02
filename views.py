@@ -9,10 +9,9 @@ def home():
     #Retourner un code html
     return render_template('index.html', name="Cyriac", age= 20) #on peut ajouter autant de variables que l'on veut et y acceder dans index.html avec {{variable}}
 
-@views.route("/profile")
+@views.route("/projects")
 def profile():
-    #request est là pour une query à la place de mettre comme paramètre de la fonction
-    return render_template('profile.html')
+    return render_template('projects.html')
 
 @views.route("/json")
 def get_json():
