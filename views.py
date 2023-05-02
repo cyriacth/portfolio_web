@@ -37,6 +37,6 @@ def file_downloads():
 @views.route("/return-files")
 def return_files():
     try:
-        return send_file("\static\files\cyriac-thibaudeau.pdf", as_attachment="cvcyriac.pdf")
+        return send_file("static/files/cyriac-thibaudeau.pdf", as_attachment="cvcyriac.pdf")
     except Exception as e:
         return str(e)
