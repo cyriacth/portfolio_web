@@ -1,5 +1,5 @@
 #Possibilité de mettre nos routes dans le app.py après initialisation de l'app, mais ici on les orgnasiera sous forme de Blueprint
-from flask import Blueprint, render_template, request, jsonify, redirect, url_for
+from flask import Blueprint, render_template, request, jsonify, redirect, url_for, send_file
 
 #Initialisation du Blueprint
 views = Blueprint(__name__, "views")
@@ -27,6 +27,16 @@ def get_data():
 def go_to_home():
     return redirect(url_for("views.home"))
 
-@views.route("/profile/<name>")
-def profile_name(name):
-    return render_template('profile_name.html', name = name)
+@views.route("/file-downloads")
+def file_downloads():
+    try:
+        return render_template("downloads.html")
+    except Exception as e:
+        return str(e)
+    
+@views.route("/return-files")
+def return_files():
+    try:
+        return send_file("\static\files\cyriac-thibaudeau.pdf", as_attachment="cvcyriac.pdf")
+    except Exception as e:
+        return str(e)
