@@ -40,3 +40,15 @@ def return_files():
         return send_file("static/files/cyriac-thibaudeau.pdf", as_attachment="cvcyriac.pdf")
     except Exception as e:
         return str(e)
+    
+@views.route("/login", methods=["POST", "GET"])
+def login():
+    if request.method == "POST":
+        user = request.form["nm"]
+        return redirect(url_for("views.user", usr=user))
+    else:
+        return render_template("login.html")
+
+@views.route("/<usr>")
+def user(usr):
+    return f"<h1>{usr}</h1>"
