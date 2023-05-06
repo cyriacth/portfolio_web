@@ -1,0 +1,61 @@
+/* Définition du style du corps de la page */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #333333;
+    background-color: #ffffff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Définition du style des liens */
+  a {
+    color: #0077cc;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Définition du style des titres */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, serif;
+    color: #444444;
+    margin-top: 0;
+    margin-bottom: 0.5em;
+  }
+  
+  h1 {
+    font-size: 36px;
+  }
+  
+  h2 {
+    font-size: 30px;
+  }
+  
+  h3 {
+    font-size: 24px;
+  }
+  
+  /* Définition du style des paragraphes */
+  p {
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+  
+  /* Définition du style des listes à puces */
+  ul {
+    list-style: disc;
+    margin-top: 0;
+    margin-bottom: 1em;
+    padding-left: 2em;
+  }
+  
+  /* Définition du style des images */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  

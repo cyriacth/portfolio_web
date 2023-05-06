@@ -6,13 +6,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
         crossorigin="anonymous">
 
-
-        <style>
-            body {background-color: rgb(209, 209, 209); font-family: courier; font-size: 100%;}
-            h1   {color: rgb(36, 36, 37); font-family: courier; font-size: 125%;}
-            p    {color: rgb(48, 47, 47); font-family: courier; font-size: 100%;}
-        </style>
-
+        <link rel="stylesheet" href="mon-style.css">
 
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,7 +25,7 @@
 
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">ICyRiel</a>
+            <span class="navbar-brand mb-0 h1">icyriel</span>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -41,7 +35,6 @@
                 <a class="nav-item nav-link" href="http://127.0.0.1:8000/views/projects">Projects</a>
                 <a class="nav-item nav-link" href="http://127.0.0.1:8000/views/file-downloads">Downloads</a>
                 <a class="nav-item nav-link" href="http://127.0.0.1:8000/views/login">Login</a>
-                <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
               </div>
             </div>
         </nav>
@@ -49,7 +42,10 @@
 
         <div>
             {% block content %}
-            <p>Hello, {{ name }} !</p>
+            <div class="container mt-4">
+              <h2 class="text-center">Hello, {{ name }} !</h2>
+              <p class="text-center">Un texte en paragraphe aligné au centre !</p>
+            </div>
             {% endblock %}
         </div>
 
