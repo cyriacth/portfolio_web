@@ -3,7 +3,7 @@ from views import views
 
 
 app = Flask(__name__)
-#Lien avec les blueprints créé
+#Lien avec les blueprints créés
 app.register_blueprint(views, url_prefix="/views")
 
 

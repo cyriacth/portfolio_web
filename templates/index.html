@@ -6,7 +6,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
         crossorigin="anonymous">
 
-        <link rel="stylesheet" href="mon-style.css">
+        <link rel="stylesheet" type="text/css" href="mon-style.css">
 
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,6 +16,7 @@
         {% block title %}
         <title>Home</title>
         {% endblock %}
+        
     </head>
 
 
@@ -40,25 +41,23 @@
         </nav>
 
 
-        <div>
-            {% block content %}
-            <div class="container mt-4">
-              <h2 class="text-center">Hello, {{ name }} !</h2>
-              <p class="text-center">Un texte en paragraphe aligné au centre !</p>
-            </div>
-            {% endblock %}
+        {% block content %}
+        <div class="container mt-4">
+          <h2 class="text-center">Bienvenue !</h2>
+          <p class="text-center">Voici un site internet simple ayant comme but unique de me présenter à vous. Vous pourrez trouver plusieurs sections, dont mes projets, un lien pour télécharger mon cv et d'autres utilitaires en cours de mises en place !</p>
         </div>
+        {% endblock %}
 
 
         <!-- les trois prochains scripts sont nécessaires pour bootstrap-->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script 
-        
+
+
+        <script
         type="text/javascript" 
         src="{{ url_for('static', filename = 'index.js' )}}">
-
         </script>
 
 

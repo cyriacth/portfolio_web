@@ -52,3 +52,7 @@ def login():
 @views.route("/<usr>")
 def user(usr):
     return f"<h1>{usr}</h1>"
+
+@views.route("/test")
+def test():
+    return render_template("test.html")

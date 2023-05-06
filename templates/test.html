@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Centrage de plusieurs blocs de texte</title>
+    <style>
+      body {
+        overflow: hidden;
+      }
+
+      .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+      }
+
+      .block {
+        margin-bottom: 2em;
+      }
+
+      .block:last-child {
+        margin-bottom: 0;
+      }
+
+      .block h2 {
+        font-size: 2em;
+        margin-bottom: 0.5em;
+      }
+
+      .block p {
+        font-size: 1.2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="centered">
+      <div class="block">
+        <h2>Bloc 1</h2>
+        <p>Texte du bloc 1</p>
+      </div>
+      <div class="block">
+        <h2>Bloc 2</h2>
+        <p>Texte du bloc 2</p>
+      </div>
+      <div class="block">
+        <h2>Bloc 2</h2>
+        <p>Texte du bloc 2</p>
+    </div>
+    <div class="block">
+        <h2>Bloc 2</h2>
+        <p>Texte du bloc 2</p>
+  </body>
+</html>
