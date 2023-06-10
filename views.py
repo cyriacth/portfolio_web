@@ -53,6 +53,6 @@ def login():
 def user(usr):
     return f"<h1>{usr}</h1>"
 
-@views.route("/test")
+@views.route("/test2")
 def test():
-    return render_template("test.html")
+    return render_template("test2.html")
