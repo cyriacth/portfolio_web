@@ -1,4 +1,4 @@
-#Possibilité de mettre nos routes dans le app.py après initialisation de l'app, mais ici on les orgnasiera sous forme de Blueprint
+#Possibilité de mettre nos routes dans le app.py après initialisation de l'app, mais ici on les organsiera sous forme de Blueprint
 from flask import Blueprint, render_template, request, jsonify, redirect, url_for, send_file
 
 #Initialisation du Blueprint
@@ -53,6 +53,6 @@ def login():
 def user(usr):
     return f"<h1>{usr}</h1>"
 
-@views.route("/test2")
+@views.route("/test")
 def test():
-    return render_template("test2.html")
+    return render_template("test.html")
