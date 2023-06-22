@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>test</button>
+    <table id="resultTable">
+        <thead>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <script>
+        const button = document.querySelector("button");
+        const resultTableBody = document.querySelector("#resultTable tbody");
+
+        button.addEventListener("click", () => {
+            navigator.geolocation.getCurrentPosition(position => {
+                const { latitude, longitude } = position.coords;
+                const url = `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`;
+                fetch(url)
+                    .then(res => res.json())
+                    .then(data => {
+                        displayData(data.address);
+                    })
+                    .catch(() => {
+                        console.log("Error fetching");
+                    });
+            });
+        });
+
+        function displayData(data) {
+            // Clear previous table rows
+            resultTableBody.innerHTML = "";
+
+            // Iterate over the data and create table rows
+            for (const key in data) {
+                const value = data[key];
+                const row = document.createElement("tr");
+                const keyCell = document.createElement("td");
+                const valueCell = document.createElement("td");
+
+                keyCell.textContent = key;
+                valueCell.textContent = value;
+
+                row.appendChild(keyCell);
+                row.appendChild(valueCell);
+                resultTableBody.appendChild(row);
+            }
+        }
+    </script>
+</body>
+
+</html>
