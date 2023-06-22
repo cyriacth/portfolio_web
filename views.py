@@ -41,13 +41,9 @@ def return_files():
     except Exception as e:
         return str(e)
     
-@views.route("/login", methods=["POST", "GET"])
+@views.route("/getposition")
 def login():
-    if request.method == "POST":
-        user = request.form["nm"]
-        return redirect(url_for("views.user", usr=user))
-    else:
-        return render_template("login.html")
+    return render_template("getposition.html")
 
 @views.route("/<usr>")
 def user(usr):
