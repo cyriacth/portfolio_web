@@ -58,12 +58,12 @@
           }
 
           .content {
-            position: fixed;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            height: 90vh;
             color: #f1f1f1;
-            width: 100%;
-            padding: 20px;
           }
 
           #myBtn {
@@ -126,12 +126,18 @@
           Your browser does not support HTML5 video.
       </video>
 
-      <div class="content">
-          <h1>Bienvenue !</h1>
-          <p>Voici un site internet simple ayant comme but unique de me présenter à vous. Vous pourrez trouver plusieurs sections, dont mes projets, un lien pour télécharger mon cv et d'autres utilitaires en cours de mises en place !</p>
-          <button id="myBtn" onclick="myFunction()">Pause</button>
-      </div>
-        
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="content">
+                <h1>Bienvenue !</h1>
+                <p>Voici un site internet simple ayant comme but de me présenter à vous. Vous pourrez trouver plusieurs sections, dont mes projets, un lien pour télécharger mon cv et d'autres utilitaires en cours de mises en place !</p>
+                <button id="myBtn" onclick="myFunction()">Pause</button>
+            </div>
+          </div>
+        </div>
+      </div>   
+
       <script>
         var video = document.getElementById("myVideo");
         var btn = document.getElementById("myBtn");
