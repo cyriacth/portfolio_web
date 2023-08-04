@@ -10,7 +10,7 @@ def home():
     return render_template('index.html', name="Cyriac", age= 20) #on peut ajouter autant de variables que l'on veut et y acceder dans index.html avec {{variable}}
 
 @views.route("/projects")
-def profile():
+def profile():  
     return render_template('projects.html')
 
 @views.route("/json")
@@ -27,10 +27,10 @@ def get_data():
 def go_to_home():
     return redirect(url_for("views.home"))
 
-@views.route("/file-downloads")
+@views.route("/contacts")
 def file_downloads():
     try:
-        return render_template("downloads.html")
+        return render_template("contacts.html")
     except Exception as e:
         return str(e)
     

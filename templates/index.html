@@ -71,17 +71,32 @@
             font-size: 18px;
             padding: 10px;
             border: none;
-            background: #000;
+            background: #100c33;
             color: #fff;
             cursor: pointer;
           }
 
           #myBtn:hover {
-            background: #ddd;
-            color: black;
+            background: #191038;
+            color: rgb(255, 255, 255);
+          }
+          
+          .full-page {
+            height: 90%; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
           }
 
+          .full-height {
+            min-height: 100%;
+            max-height: 100%;
+          }
           
+          .full-width {
+            min-width: 100%;
+            max-width: 100%;
+          }
         
           </style>
 
@@ -111,7 +126,7 @@
                 <div class="navbar-nav ms-auto">
                   <a class="nav-item nav-link active" href="http://127.0.0.1:8000/views">Bienvenue :)<span class="sr-only"></span></a>
                   <a class="nav-item nav-link" href="http://127.0.0.1:8000/views/projects">-> Les projets ! </a>
-                  <a class="nav-item nav-link" href="http://127.0.0.1:8000/views/file-downloads">-> Mes contacts</a>
+                  <a class="nav-item nav-link" href="http://127.0.0.1:8000/views/contacts">-> Mes contacts</a>
                   <a class="nav-item nav-link" href="http://127.0.0.1:8000/views/login">Login</a>
                 </div>
               </div>
