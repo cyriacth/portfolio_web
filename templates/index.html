@@ -54,7 +54,7 @@
             top: 0;
             left: 0;
             z-index: -1;
-            background-image: url( '/static/files/testnoise.png' );
+            background-image: url( '/static/files/testnoise2.png' );
           }
 
           .content {
@@ -99,13 +99,13 @@
           }
 
           .svg-bg {
-  width: 1600px;
-  height: 900px;
-  filter: contrast(100%) brightness(100%) invert(100%);
-  background: 
-	radial-gradient(circle at 45% 0%, rgba(245,245,251,1), rgba(0,0,0,0)),
-	url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.29' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-}
+            width: 1600px;
+            height: 900px;
+            filter: contrast(100%) brightness(100%) invert(100%);
+            background: 
+            radial-gradient(circle at 45% 0%, rgba(245,245,251,1), rgba(0,0,0,0)),
+            url("data:image/svg+xml,%3Csvg viewBox='0 0 1000 1000' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.29' numOctaves='1' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+          }
         
           </style>
 
@@ -145,10 +145,8 @@
 
     {% block content %}
 
-      <video autoplay muted loop id="myVideo">
-          <source src="/static/files/pexels-pressmaster-3130182-3840x2160-30fps.mp4" type="video/mp4">
-          Your browser does not support HTML5 video.
-      </video>
+    <div class="projectimage">
+    </div>
 
       <div class="container">
         <div class="row">
@@ -156,25 +154,25 @@
             <div class="content">
                 <h1>Bienvenue !</h1>
                 <p>Voici un site internet simple ayant comme but de me présenter à vous. Vous pourrez trouver plusieurs sections, dont mes projets, un lien pour télécharger mon cv et d'autres utilitaires en cours de mises en place !</p>
-                <button id="myBtn" onclick="myFunction()">Pause</button>
+                <!-- <button id="myBtn" onclick="myFunction()">Pause</button>  -->
             </div>
           </div>
         </div>
       </div>   
 
       <script>
-        var video = document.getElementById("myVideo");
-        var btn = document.getElementById("myBtn");
+        // var video = document.getElementById("myVideo");
+        // var btn = document.getElementById("myBtn");
         
-        function myFunction() {
-          if (video.paused) {
-            video.play();
-            btn.innerHTML = "Pause";
-          } else {
-            video.pause();
-            btn.innerHTML = "Play";
-          }
-        }
+        //myFunction() {
+        // if (video.paused) {
+        //   video.play();
+        //   btn.innerHTML = "Pause";
+        // } else {
+        //   video.pause();
+        //   btn.innerHTML = "Play";
+        // }
+        //}
       </script>
 
     {% endblock %}
