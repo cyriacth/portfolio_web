@@ -88,6 +88,17 @@
             margin: 0 auto;
             /* border: 1px solid #ccc; */
           }
+
+          footer {
+              position: fixed;
+              bottom: 0;
+              width: 100%;
+              background-color: #333;
+              color: white;
+              text-align: center;
+              padding: 10px 0;
+              font-family: "Cormorant Garamond", serif;
+          }
           </style>
 
         <meta charset="UTF-8">
@@ -124,10 +135,12 @@
       </nav>
         
 
-      {% block content %}
-
       <div class="projectimage">
       </div>
+
+      {% block content %}
+
+      
       
       <div class="container">
         <div class="row">
@@ -138,12 +151,14 @@
         </div>
       </div>   
 
-        <script>
-        
-        </script>
+      
 
       {% endblock %}
-
+      
+      <footer>
+        <p>&copy; 2023 John Doe. Tous droits réservés.</p>
+      </footer>
+      
 
       
 

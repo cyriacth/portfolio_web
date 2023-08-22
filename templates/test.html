@@ -1,85 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body, html {
-  overflow-x: hidden;
-  overflow-y: hidden;
-  /* Autres styles pour body et html */
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-.container {
-  width: 98%;
-  margin: 0 auto;
-  border: 1px solid #ccc;
-  padding: 20px;
-}
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
 
-.scrollable-content {
-  max-height: 98%; /* Ajustez la hauteur maximale selon vos besoins */
-  overflow-y: auto;
-}
+        nav {
+            background-color: #444;
+            padding: 10px 0;
+            text-align: center;
+        }
 
-  </style>
-  <title>Scrollable Container</title>
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        section {
+            padding: 50px;
+        }
+
+        .project {
+            margin-bottom: 20px;
+        }
+
+        footer {
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <div class="scrollable-content">
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      <p>TEST</p>
-      
-    </div>
-  </div>
+    <header>
+        <h1>John Doe</h1>
+        <p>Étudiant en Sciences de l'Informatique</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#projects">Projets</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <h2>À propos de moi</h2>
+        <p>Je suis passionné par la programmation et les technologies de l'information. J'aime résoudre des problèmes et créer des solutions innovantes.</p>
+    </section>
+
+    <section id="projects">
+        <h2>Mes projets</h2>
+        <div class="project">
+            <h3>Application Web de Gestion des Tâches</h3>
+            <p>Une application web qui permet aux utilisateurs de gérer leurs tâches quotidiennes de manière efficace.</p>
+        </div>
+        <div class="project">
+            <h3>Système de Recommandation de Films</h3>
+            <p>Un système de recommandation basé sur des algorithmes de filtrage collaboratif pour suggérer des films aux utilisateurs.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>N'hésitez pas à me contacter par e-mail : john.doe@example.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 John Doe. Tous droits réservés.</p>
+    </footer>
 </body>
 </html>
